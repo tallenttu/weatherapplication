@@ -17,6 +17,7 @@ def mainpage():
     if request.method == 'POST':
         city = request.form['city']
         state = request.form['state']
+
     if city != "":
         r = requests.get("http://api.wunderground.com/api/b912244185f64b1c/geolookup/conditions/q/"+ state +"/"+ city+".json")
         data = r.json()

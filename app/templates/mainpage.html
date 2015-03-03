@@ -23,7 +23,7 @@
   </head>
 
   <body>
-
+    <center>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -60,7 +60,7 @@
 						<p>
             </br>
 
-            <form action="" method="POST">
+            <form action="" method="POST" class="container">
               <b>Enter City:</b>
               <input type = "text" placeholder="City" name="city" value = "{{request.form.city}}">
               </br>
@@ -120,19 +120,25 @@
                 	<option value="WI">Wisconsin</option>
                 	<option value="WY">Wyoming</option>
                 </select>
-              <p><input type="submit" value="Get Weather"></p>
+              </br>
+
+              <p><input class ="button" type="submit" value="Get Weather"></p>
+
             </form>
+
             <p>
-              Current Weather Information:
-              <h3>Temperature:{{tempf}}</h3>
+              <h3>Current Weather Information:</h3>
+              <h4>Temperature:{{tempf}}</h4>
               <img src={{currweathericon}}>
               </br>
-              <h3>Sky Condition:  {{skycondition}}</h3>
+              <h4>Sky Condition:  {{skycondition}}</h4>
               </br>
               <p>As Reported From:  {{reportfrom}}</p>
             </p>
 
-
+            <div bg ="grey"class = "footer">
+              Author: Tyler Allen
+            </div>
 
             </p>
 					</header>
@@ -157,4 +163,5 @@
     <script src="/static/js/bootstrap-typeahead.js"></script>
 
   </body>
+</center>
 </html>
