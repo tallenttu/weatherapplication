@@ -4,8 +4,6 @@ from datetime import datetime
 from app import app
 
 
-
-
 @app.route('/', methods = ['GET', 'POST'])
 def mainpage():
     dt = datetime.now()
@@ -26,6 +24,7 @@ def mainpage():
         tempf = str(data['current_observation']['temp_f']) + "F"
         skycondition = data['current_observation']['weather']
         reportfrom = data['current_observation']['observation_location']['full']
+
     return render_template('mainpage.html',city = city,
     state = state,
     dt=dt,
